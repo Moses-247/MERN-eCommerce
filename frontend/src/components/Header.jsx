@@ -10,7 +10,7 @@ import { toast } from 'react-toastify';
 import SearchBox from './SearchBox';
 
 const Header = () => {
-  const { cartItems } = useSelector(state => state.cart);
+  const { cartItems = [] } = useSelector(state => state.cart);
   const { userInfo } = useSelector(state => state.auth);
   const [logoutApiCall] = useLogoutMutation();
   const dispatch = useDispatch();
